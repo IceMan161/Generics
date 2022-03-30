@@ -1,8 +1,8 @@
 package ru.netology.repository;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import ru.netology.domain.Ticket;
-import org.junit.jupiter.api.Assertions;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -48,9 +48,9 @@ class RepositoryTest {
 
         repository.removeById(1);
 
-        Ticket[] expected = new Ticket[] {second,third};
+        Ticket[] expected = new Ticket[]{second, third};
         Ticket[] actual = repository.findAll();
-        assertArrayEquals(expected,actual);
+        assertArrayEquals(expected, actual);
 
     }
 }
