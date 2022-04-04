@@ -36,11 +36,7 @@ public class TicketManager {
 
     public boolean matches(Ticket ticket, String departureAirport, String arrivalAirport) {
         if (ticket.getDepartureAirport().equalsIgnoreCase(departureAirport))
-            if (ticket.getArrivalAirport().equalsIgnoreCase(arrivalAirport)) {
-                return true;
-            } else {
-                return false;
-            }
+            return ticket.getArrivalAirport().equalsIgnoreCase(arrivalAirport);
         return false;
     }
 }
